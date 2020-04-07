@@ -6,6 +6,8 @@ try {
     console.log('Error:', e);
 }
 
+// to open default browser and navigate to the add to cart URL
+const open = require('open')
 const BestBuyAPI = require('bestbuy')(apiKey);
 
 const SKUs = [6364255, 6364253, 6401728];
@@ -26,7 +28,8 @@ var SearchRslts = (prodIds) => {
     })
 }
 
-var count = 1;
+
+var counter = 1;
 var lastTime = [" "," "," "];
 var lastAvailable = [false, false, false]
 setInterval(function() {
@@ -39,19 +42,22 @@ setInterval(function() {
                 lastTime[i] = prods[i].onlineAvailabilityUpdateDate
                 console.log("STOCK UPDATE for " + name + " at " + lastTime[i]);
             }
+            
             if(prods[i].onlineAvailability!=lastAvailable[i]){
                 if(!lastAvailable[i]){
+                    open(prods[i].addToCartUrl)
                     console.log(name + " Becomes Available ");
-                    console.log(prods[i].addToCartUrl)
                 }
                 else
                     console.log(name + " Becomes Unavailable" + prods[i].addToCartUrl)
-                lastAvailable[i]!=lastAvailable[i];
+                    lastAvailable[i]!=lastAvailable[i];
             }
         }
-            //            if(prods[i].orderable=='Available')
-            //            if(prods[i].orderable=='SoldOut')
-            count+=1;
-            console.log(count)
-        }).catch(err => err)
-    }, 2000);
+        //            if(prods[i].orderable=='Available')
+        //            if(prods[i].orderable=='SoldOut')
+        counter+=1;
+        console.log(counter)
+    }).catch(err => {
+        console.error('Error Message: ' + err.message);
+    })
+}, 2000);
