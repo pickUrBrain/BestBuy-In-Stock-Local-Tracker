@@ -27,7 +27,16 @@ var SearchRslts = (prodIds) => {
     show: 'sku,name,onlineAvailability,onlineAvailabilityUpdateDate,orderable,addToCartUrl'
     })
 }
-//,inStorePickup,inStoreAvailability,homeDelivery
+
+var QuickCheck = (prodIds) => {
+    return BestBuyAPI.products(CreateSKUsQuery(prodIds), {
+    show: 'sku,name,onlineAvailability,orderable,addToCartUrl,inStorePickup,inStoreAvailability,homeDelivery,onlineAvailabilityUpdateDate'
+    })
+}
+
+//QuickCheck(SKUs).then(response => {console.log(response)}).catch(err => {
+//    console.error('Error Message: ' + err.message.products);
+//})
 
 var counter = 1;
 var lastTime = [" "," "," "];
@@ -42,7 +51,7 @@ setInterval(function() {
                 lastTime[i] = prods[i].onlineAvailabilityUpdateDate
                 console.log("STOCK UPDATE for " + name + " at " + lastTime[i]);
             }
-            
+
             if(prods[i].onlineAvailability!=lastAvailable[i]){
                 console.log("To get sense about the orderable status: " + prods[i].orderable)
                 if(!lastAvailable[i]){
