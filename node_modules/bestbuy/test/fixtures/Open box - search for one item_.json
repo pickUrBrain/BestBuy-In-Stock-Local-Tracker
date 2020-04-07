@@ -1,0 +1,92 @@
+[
+    {
+        "scope": "https://api.bestbuy.com:443",
+        "method": "get",
+        "path": "/beta/products/5762002/openBox?format=json&apiKey=XXX",
+        "body": "",
+        "status": 200,
+        "response": {
+            "metadata": {
+                "context": {
+                    "canonicalUrl": "https://api.bestbuy.com/beta/products/5762002/openBox?format=json&apiKey=XXX"
+                },
+                "resultSet": {
+                    "count": 1
+                }
+            },
+            "results": [
+                {
+                    "sku": "5762002",
+                    "customerReviews": {
+                        "averageScore": 4.7,
+                        "count": 324
+                    },
+                    "descriptions": {
+                        "short": "2160p (4K) resolutionSmart TV, Samsung Smart Hub, web browserMotion Rate 120"
+                    },
+                    "images": {
+                        "standard": "https://img.bbystatic.com/BestBuy_US/images/products/5762/5762002_sa.jpg"
+                    },
+                    "names": {
+                        "title": "Samsung - 50\" Class (49.5\" Diag.) - LED - 2160p - Smart - 4K Ultra HD TV"
+                    },
+                    "prices": {
+                        "regular": 749.99,
+                        "current": 749.99
+                    },
+                    "links": {
+                        "product": "https://api.bestbuy.com/v1/products/5762002.json?apiKey=XXX",
+                        "web": "https://api.bestbuy.com/click/-/5762002/pdp#tab=buyingOptions",
+                        "addToCart": "https://api.bestbuy.com/click/-/5762002/cart?listing_id=3"
+                    },
+                    "offers": [
+                        {
+                            "prices": {
+                                "current": 512.99,
+                                "regular": 749.99
+                            },
+                            "condition": "certified",
+                            "onlineAvailability": true,
+                            "inStoreAvailability": true,
+                            "listingId": "3",
+                            "sellerId": null
+                        },
+                        {
+                            "prices": {
+                                "current": 496.99,
+                                "regular": 749.99
+                            },
+                            "condition": "excellent",
+                            "onlineAvailability": true,
+                            "inStoreAvailability": true,
+                            "listingId": "2",
+                            "sellerId": null
+                        }
+                    ]
+                }
+            ]
+        },
+        "rawHeaders": [
+            "Access-Control-Allow-Headers",
+            "origin, x-requested-with, accept",
+            "Access-Control-Allow-Methods",
+            "GET",
+            "Access-Control-Allow-Origin",
+            "*",
+            "Access-Control-Max-Age",
+            "3628800",
+            "Content-Type",
+            "application/json; charset=UTF-8",
+            "Date",
+            "Thu, 07 Sep 2017 00:04:58 GMT",
+            "Server",
+            "Best Buy Public APIs",
+            "X-Cache-Hit",
+            "",
+            "Content-Length",
+            "1156",
+            "Connection",
+            "Close"
+        ]
+    }
+]

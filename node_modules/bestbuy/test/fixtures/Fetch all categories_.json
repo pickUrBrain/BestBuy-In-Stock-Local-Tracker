@@ -1,0 +1,84 @@
+[
+    {
+        "scope": "https://api.bestbuy.com:443",
+        "method": "get",
+        "path": "/v1/categories?format=json&apiKey=XXX&show=name,id",
+        "body": "",
+        "status": 200,
+        "response": {
+            "from": 1,
+            "to": 10,
+            "currentPage": 1,
+            "total": 3768,
+            "totalPages": 377,
+            "queryTime": "0.020",
+            "totalTime": "0.028",
+            "partial": false,
+            "canonicalUrl": "/v1/categories?show=name,id&format=json&apiKey=XXX",
+            "categories": [
+                {
+                    "name": "Gift Ideas",
+                    "id": "abcat0010000"
+                },
+                {
+                    "name": "Unique Gifts",
+                    "id": "abcat0020004"
+                },
+                {
+                    "name": "TV & Home Theater",
+                    "id": "abcat0100000"
+                },
+                {
+                    "name": "TVs",
+                    "id": "abcat0101000"
+                },
+                {
+                    "name": "All Flat-Panel TVs",
+                    "id": "abcat0101001"
+                },
+                {
+                    "name": "TV/DVD Combos",
+                    "id": "abcat0101005"
+                },
+                {
+                    "name": "Blu-ray & DVD Players",
+                    "id": "abcat0102000"
+                },
+                {
+                    "name": "Blu-ray Players",
+                    "id": "abcat0102003"
+                },
+                {
+                    "name": "DVD Players",
+                    "id": "abcat0102005"
+                },
+                {
+                    "name": "Portable DVD Players",
+                    "id": "abcat0102008"
+                }
+            ]
+        },
+        "rawHeaders": [
+            "Access-Control-Allow-Headers",
+            "origin, x-requested-with, accept",
+            "Access-Control-Allow-Methods",
+            "GET",
+            "Access-Control-Allow-Origin",
+            "*",
+            "Access-Control-Max-Age",
+            "3628800",
+            "Content-Type",
+            "application/json; charset=UTF-8",
+            "Date",
+            "Thu, 07 Sep 2017 00:02:02 GMT",
+            "Server",
+            "Best Buy Public APIs",
+            "X-Cache-Hit",
+            "true",
+            "Content-Length",
+            "684",
+            "Connection",
+            "Close"
+        ]
+    }
+]

@@ -1,0 +1,212 @@
+[
+    {
+        "scope": "https://api.bestbuy.com:443",
+        "method": "get",
+        "path": "/v1/products/4971902/stores.json?format=json&apiKey=XXX&postalCode=55454",
+        "body": "",
+        "status": 200,
+        "response": {
+            "ispuEligible": true,
+            "stores": [
+                {
+                    "storeID": "7",
+                    "name": "Roseville",
+                    "address": "1643 County Road B2",
+                    "city": "Roseville",
+                    "state": "MN",
+                    "postalCode": "55113",
+                    "storeType": "Big_Box_Store",
+                    "minPickupHours": null,
+                    "lowStock": false
+                },
+                {
+                    "storeID": "281",
+                    "name": "Richfield",
+                    "address": "1000 West 78th St",
+                    "city": "Richfield",
+                    "state": "MN",
+                    "postalCode": "55423",
+                    "storeType": "Big_Box_Store",
+                    "minPickupHours": null,
+                    "lowStock": false
+                },
+                {
+                    "storeID": "1000",
+                    "name": "Mall of America",
+                    "address": "340 W Market",
+                    "city": "Bloomington",
+                    "state": "MN",
+                    "postalCode": "55425",
+                    "storeType": "Big_Box_Store",
+                    "minPickupHours": null,
+                    "lowStock": false
+                },
+                {
+                    "storeID": "4",
+                    "name": "Minnetonka",
+                    "address": "13513 Ridgedale Dr",
+                    "city": "Hopkins",
+                    "state": "MN",
+                    "postalCode": "55305",
+                    "storeType": "Big_Box_Store",
+                    "minPickupHours": null,
+                    "lowStock": false
+                },
+                {
+                    "storeID": "1055",
+                    "name": "Eagan",
+                    "address": "1235 Town Centre Dr",
+                    "city": "Eagan",
+                    "state": "MN",
+                    "postalCode": "55123",
+                    "storeType": "Big_Box_Store",
+                    "minPickupHours": null,
+                    "lowStock": false
+                },
+                {
+                    "storeID": "11",
+                    "name": "Northtown",
+                    "address": "300 Northtown Dr NE",
+                    "city": "Blaine",
+                    "state": "MN",
+                    "postalCode": "55434",
+                    "storeType": "Big_Box_Store",
+                    "minPickupHours": null,
+                    "lowStock": false
+                },
+                {
+                    "storeID": "611",
+                    "name": "Eden Prairie",
+                    "address": "11600 Leona Rd",
+                    "city": "Eden Prairie",
+                    "state": "MN",
+                    "postalCode": "55344",
+                    "storeType": "Big_Box_Store",
+                    "minPickupHours": null,
+                    "lowStock": false
+                },
+                {
+                    "storeID": "10",
+                    "name": "Maplewood",
+                    "address": "1795 County Rd D E",
+                    "city": "Maplewood",
+                    "state": "MN",
+                    "postalCode": "55109",
+                    "storeType": "Big_Box_Store",
+                    "minPickupHours": null,
+                    "lowStock": false
+                },
+                {
+                    "storeID": "329",
+                    "name": "Maple Grove",
+                    "address": "12905 Elm Creek Blvd N",
+                    "city": "Maple Grove",
+                    "state": "MN",
+                    "postalCode": "55369",
+                    "storeType": "Big_Box_Store",
+                    "minPickupHours": null,
+                    "lowStock": false
+                },
+                {
+                    "storeID": "15",
+                    "name": "Oakdale",
+                    "address": "8301 3rd St N",
+                    "city": "Oakdale",
+                    "state": "MN",
+                    "postalCode": "55128",
+                    "storeType": "Big_Box_Store",
+                    "minPickupHours": null,
+                    "lowStock": false
+                },
+                {
+                    "storeID": "8",
+                    "name": "Burnsville",
+                    "address": "14141 Aldrich Ave S",
+                    "city": "Burnsville",
+                    "state": "MN",
+                    "postalCode": "55337",
+                    "storeType": "Big_Box_Store",
+                    "minPickupHours": null,
+                    "lowStock": false
+                },
+                {
+                    "storeID": "1463",
+                    "name": "Shakopee",
+                    "address": "8100 Old Carriage Ct",
+                    "city": "Shakopee",
+                    "state": "MN",
+                    "postalCode": "55379",
+                    "storeType": "Big_Box_Store",
+                    "minPickupHours": null,
+                    "lowStock": false
+                },
+                {
+                    "storeID": "245",
+                    "name": "Apple Valley",
+                    "address": "15300 Cedar Ave",
+                    "city": "Apple Valley",
+                    "state": "MN",
+                    "postalCode": "55124",
+                    "storeType": "Big_Box_Store",
+                    "minPickupHours": null,
+                    "lowStock": false
+                },
+                {
+                    "storeID": "540",
+                    "name": "Coon Rapids",
+                    "address": "12633 Riverdale Blvd NW",
+                    "city": "Coon Rapids",
+                    "state": "MN",
+                    "postalCode": "55448",
+                    "storeType": "Big_Box_Store",
+                    "minPickupHours": null,
+                    "lowStock": false
+                },
+                {
+                    "storeID": "1514",
+                    "name": "Hutchinson",
+                    "address": "1350 Hwy 15 S",
+                    "city": "Hutchinson",
+                    "state": "MN",
+                    "postalCode": "55350",
+                    "storeType": "Self_Delivery_Store",
+                    "minPickupHours": null,
+                    "lowStock": false
+                },
+                {
+                    "storeID": "12",
+                    "name": "St Cloud",
+                    "address": "4130 W Division St",
+                    "city": "Saint Cloud",
+                    "state": "MN",
+                    "postalCode": "56301",
+                    "storeType": "Self_Delivery_Store",
+                    "minPickupHours": null,
+                    "lowStock": false
+                }
+            ]
+        },
+        "rawHeaders": [
+            "Access-Control-Allow-Headers",
+            "origin, x-requested-with, accept",
+            "Access-Control-Allow-Methods",
+            "GET",
+            "Access-Control-Allow-Origin",
+            "*",
+            "Access-Control-Max-Age",
+            "3628800",
+            "Content-Type",
+            "application/json; charset=UTF-8",
+            "Date",
+            "Sat, 18 Nov 2017 18:17:40 GMT",
+            "Server",
+            "Best Buy Public APIs",
+            "X-Cache-Hit",
+            "true",
+            "Content-Length",
+            "3052",
+            "Connection",
+            "Close"
+        ]
+    }
+]

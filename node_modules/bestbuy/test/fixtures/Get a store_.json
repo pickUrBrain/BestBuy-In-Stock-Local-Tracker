@@ -1,0 +1,68 @@
+[
+    {
+        "scope": "https://api.bestbuy.com:443",
+        "method": "get",
+        "path": "/v1/stores/1443.json?format=json&apiKey=XXX",
+        "body": "",
+        "status": 200,
+        "response": {
+            "storeId": 1443,
+            "storeType": "Big Box",
+            "tradeIn": null,
+            "name": "BLAINE MN",
+            "longName": "Blaine",
+            "address": "10985 Ulysses St NE",
+            "address2": "",
+            "city": "Blaine",
+            "region": "MN",
+            "fullPostalCode": "55434-3827",
+            "country": "US",
+            "lat": 45.17,
+            "lng": -93.24,
+            "hours": "Sun: 10-8; Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 10-8; Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9",
+            "hoursAmPm": "Sun: 10am-8pm; Mon: 10am-9pm; Tue: 10am-9pm; Wed: 10am-9pm; Thurs: 10am-9pm; Fri: 10am-9pm; Sat: 10am-9pm; Sun: 10am-8pm; Mon: 10am-9pm; Tue: 10am-9pm; Wed: 10am-9pm; Thurs: 10am-9pm; Fri: 10am-9pm; Sat: 10am-9pm",
+            "gmtOffset": -5,
+            "services": [
+                {
+                    "service": "Apple Shop"
+                },
+                {
+                    "service": "Geek Squad Services"
+                },
+                {
+                    "service": "Car and GPS Install Services"
+                },
+                {
+                    "service": "Samsung Experience"
+                },
+                {
+                    "service": "Trade-In"
+                }
+            ],
+            "phone": "763-754-5366",
+            "postalCode": "55434"
+        },
+        "rawHeaders": [
+            "Access-Control-Allow-Headers",
+            "origin, x-requested-with, accept",
+            "Access-Control-Allow-Methods",
+            "GET",
+            "Access-Control-Allow-Origin",
+            "*",
+            "Access-Control-Max-Age",
+            "3628800",
+            "Content-Type",
+            "application/json; charset=UTF-8",
+            "Date",
+            "Thu, 07 Sep 2017 00:02:08 GMT",
+            "Server",
+            "Best Buy Public APIs",
+            "X-Cache-Hit",
+            "true",
+            "Content-Length",
+            "862",
+            "Connection",
+            "Close"
+        ]
+    }
+]

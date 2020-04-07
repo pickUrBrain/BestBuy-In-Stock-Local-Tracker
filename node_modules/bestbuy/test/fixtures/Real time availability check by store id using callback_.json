@@ -1,0 +1,47 @@
+[
+    {
+        "scope": "https://api.bestbuy.com:443",
+        "method": "get",
+        "path": "/v1/products/4971902/stores.json?format=json&apiKey=XXX&storeId=281",
+        "body": "",
+        "status": 200,
+        "response": {
+            "ispuEligible": true,
+            "stores": [
+                {
+                    "storeID": "281",
+                    "name": "Richfield",
+                    "address": "1000 West 78th St",
+                    "city": "Richfield",
+                    "state": "MN",
+                    "postalCode": "55423",
+                    "storeType": "Big_Box_Store",
+                    "minPickupHours": null,
+                    "lowStock": false
+                }
+            ]
+        },
+        "rawHeaders": [
+            "Access-Control-Allow-Headers",
+            "origin, x-requested-with, accept",
+            "Access-Control-Allow-Methods",
+            "GET",
+            "Access-Control-Allow-Origin",
+            "*",
+            "Access-Control-Max-Age",
+            "3628800",
+            "Content-Type",
+            "application/json; charset=UTF-8",
+            "Date",
+            "Sat, 18 Nov 2017 18:17:40 GMT",
+            "Server",
+            "Best Buy Public APIs",
+            "X-Cache-Hit",
+            "true",
+            "Content-Length",
+            "219",
+            "Connection",
+            "Close"
+        ]
+    }
+]
