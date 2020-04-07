@@ -24,10 +24,10 @@ const CreateSKUsQuery = (skusArr) => {
 
 var SearchRslts = (prodIds) => {
     return BestBuyAPI.products(CreateSKUsQuery(prodIds), {
-    show: 'sku,name,onlineAvailability,onlineAvailabilityUpdateDate,orderable,inStoreAvailability,addToCartUrl'
+    show: 'sku,name,onlineAvailability,onlineAvailabilityUpdateDate,orderable,addToCartUrl'
     })
 }
-
+//,inStorePickup,inStoreAvailability,homeDelivery
 
 var counter = 1;
 var lastTime = [" "," "," "];
@@ -44,19 +44,21 @@ setInterval(function() {
             }
             
             if(prods[i].onlineAvailability!=lastAvailable[i]){
+                console.log("To get sense about the orderable status: " + prods[i].orderable)
                 if(!lastAvailable[i]){
                     open(prods[i].addToCartUrl)
                     console.log(name + " Becomes Available ");
                 }
-                else
+                else{
                     console.log(name + " Becomes Unavailable" + prods[i].addToCartUrl)
-                    lastAvailable[i]!=lastAvailable[i];
+                }
+                lastAvailable[i]!=lastAvailable[i];
             }
         }
         //            if(prods[i].orderable=='Available')
         //            if(prods[i].orderable=='SoldOut')
         counter+=1;
-        console.log(counter)
+        console.log(counter)    // updates
     }).catch(err => {
         console.error('Error Message: ' + err.message);
     })
