@@ -19,18 +19,30 @@ const CreateSKUsQuery = (skusArr) => {
   return skus.join('|');
 };
 
-const SearchRslts = (prodIds) => {
+
+var SearchRslts = (prodIds) => {
   return BestBuyAPI.products(CreateSKUsQuery(prodIds), {
-    show: 'sku,salePrice,onlineAvailability'
+    show: 'sku,name,onlineAvailability,onlineAvailabilityUpdateDate,orderable,inStoreAvailability,inStoreAvailabilityUpdateDate'
   })
 }
 
-// SearchRslts(SKUs).then(response => {
-//   console.log(response);
-// }).catch(err => err)
-
+var count = 1;
 setInterval(function() {
-  SearchRslts(SKUs).then(response => {
-    console.log(response);
-  }).catch(err => err)
-}, 1000);
+   SearchRslts(SKUs).then(response => {
+       for (const p of response.products){
+//           console.log(p);
+//           if(p.orderable=='SoldOut')
+//               console.log("SoldOut");
+//           if(p.orderable=='Available' && p.onlineAvailability)
+//               console.log(p.name);
+           if(p.orderable=='Available' && p.onlineAvailability){
+               console.log(p.sku);
+               console.log(p.name);
+           }
+//           else
+//               console.log("Offline Available");
+       }
+       count+=1;
+       console.log(count)
+   }).catch(err => err)
+}, 2000);
