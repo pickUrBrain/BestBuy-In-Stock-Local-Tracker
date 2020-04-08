@@ -11,7 +11,6 @@ const open = require('open')
 const BestBuyAPI = require('bestbuy')(apiKey);
 
 const SKUs = [6364255, 6364253, 6401728];
-
 const CreateSKUsQuery = (skusArr) => {
     if (!Array.isArray(skusArr)) {
         throw new Error('Not an array');
@@ -24,7 +23,7 @@ const CreateSKUsQuery = (skusArr) => {
 
 var SearchRslts = (prodIds) => {
     return BestBuyAPI.products(CreateSKUsQuery(prodIds), {
-    show: 'sku,name,onlineAvailability,onlineAvailabilityUpdateDate,orderable,addToCartUrl'
+    show: 'sku,name,onlineAvailability,onlineAvailabilityUpdateDate,orderable,inStoreAvailability,addToCartUrl'
     })
 }
 
@@ -41,34 +40,38 @@ var QuickCheck = (prodIds) => {
 var counter = 1;
 var lastTime = [" "," "," "];
 var lastAvailable = [false, false, false]
+
 setInterval(function() {
     SearchRslts(SKUs).then(response => {
         var prods = response.products
         for (i = 0; i < prods.length; i++){
             //           console.log(prods[i]);
             var name = prods[i].name.split(' - ')[2].substring(0, 10);
+            
             if(prods[i].onlineAvailabilityUpdateDate!=lastTime[i]){
                 lastTime[i] = prods[i].onlineAvailabilityUpdateDate
-                console.log("STOCK UPDATE for " + name + " at " + lastTime[i]);
+                console.log("LATEST STOCK UPDATE for " + name + " at " + lastTime[i]);
             }
-
+            
             if(prods[i].onlineAvailability!=lastAvailable[i]){
-                console.log("To get sense about the orderable status: " + prods[i].orderable)
+                console.log("To know about the orderable status: " + prods[i].orderable)
                 if(!lastAvailable[i]){
                     open(prods[i].addToCartUrl)
-                    console.log(name + " Becomes Available ");
+                    console.log(name + " becomes Available ");
                 }
                 else{
-                    console.log(name + " Becomes Unavailable" + prods[i].addToCartUrl)
+                    console.log(name + " becomes Unavailable" + prods[i].addToCartUrl)
                 }
-                lastAvailable[i]!=lastAvailable[i];
+                lastAvailable[i]=!lastAvailable[i];
             }
         }
         //            if(prods[i].orderable=='Available')
         //            if(prods[i].orderable=='SoldOut')
         counter+=1;
-        console.log(counter)    // updates
-    }).catch(err => {
-        console.error('Error Message: ' + err.message);
-    })
+        console.log(counter)    // progress update
+        if(counter%50==0)
+            console.log(prods)
+            }).catch(err => {
+                console.error('Error Message: ' + err.message);
+            })
 }, 2000);
