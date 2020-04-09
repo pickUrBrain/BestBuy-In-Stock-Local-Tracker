@@ -1,4 +1,4 @@
-# In-Stock Local Tracker for BestBuy Products
+# In-Stock Local Tracker for Best Buy Products
 
 ## Features
 * Get local updates on the in-store and online availablility
@@ -7,10 +7,9 @@
 
 ## Usage
 Currently there are two runnable scripts for use.
-* `main.js` is well-commented. Feel free to fork the repo and change the code so you could track any items mainly on BestBuy USA.
+* `main.js` is well-commented. Feel free to fork the repo and customize the code to track any otheritems on Best Buy.
 
 * `EasyRunSwitchInStockTracker.js` needs no more edits than setting up the api key. You only need to run this script if you want to buy the Nintendo Switch.
-
 
 ## Getting Started
  1. Sign-up for a developer API Key at https://developer.bestbuy.com/
@@ -26,13 +25,9 @@ const BestBuyAPI = require('bestbuy')('ABp3jkZI5KOzCdTDzkofjo19');
   5. Run either command in the Terminal depends on your need:<br>
   `node EasyRunSwitchInStockTracker.js`<br>
   `node main.js`
-      
-## References
- - [Best Buy Developer Portal](https://developer.bestbuy.com)
- - [Best Buy API Query Builder](https://github.com/BestBuyAPIs/bby-query-builder)
 
 ## Q&A
-### What does it look like on my console?
+### What does it look like?
 
 Here's a snippet of the console outputs.
 ```
@@ -51,4 +46,8 @@ LATEST ONLINE STOCK UPDATE for Gray Joy-C at 2020-04-08T12:11:15
 ```
 
 ### How to find the SKU number?
+![SKU example](https://github.com/dareg0/BestBuy-In-Stock-Local-Tracker/blob/master/skuScreeshot.png)
 
+## Resources
+ - [Best Buy Developer Portal](https://developer.bestbuy.com)
+ - [Best Buy API Query Builder](https://github.com/BestBuyAPIs/bby-query-builder)
