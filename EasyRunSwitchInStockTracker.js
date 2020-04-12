@@ -14,7 +14,7 @@ var SearchRslts = (prodIds) => {
 }
 var LastUpdateStr = [" "," "," "];
 var LastOnlineAvailable = [false, false, false];;
-
+var counter = -1;
 function Monitor() {
     SearchRslts(SKUs).then(response => {
         var prods = response.products
@@ -38,9 +38,10 @@ function Monitor() {
                 LastUpdateStr[i] = prods[i].onlineAvailabilityUpdateDate
                 console.log("Latest online stock update for " + name + " at " + LastUpdateStr[i]);
             }
-        }
-    }
-                           ).catch(err => {
+        }counter+=1;
+        if(counter%20==0){
+            console.log("Running")}
+    }).catch(err => {
         console.error('Error Message: ' + err.message);
     })
 }
