@@ -40,7 +40,6 @@ function Monitor() {
                 pStr+= "AVAILABLE] for online shipping."
                 console.log(pStr)
             }
-            console.log(prods)
         }
     }).catch(err => {
         console.error('Error Message: ' + err.message);
