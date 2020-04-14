@@ -30,6 +30,8 @@ const BestBuyAPI = require('bestbuy')('ABp3jkZI5KOzCdTDzkofjo19');
 ### What does it look like?
 
 Here's a snippet of the console outputs.
+> :warning: The time string is given out by BestBuy API, **not reflecting your local time**:
+
 ```
 4/8/2020
 LATEST ONLINE STOCK UPDATE for Neon Red/N at 2020-04-08T11:32:11
@@ -44,6 +46,11 @@ LATEST ONLINE STOCK UPDATE for Neon Red/N at 2020-04-08T12:32:15
 Gray Joy-C becomes unavailable
 LATEST ONLINE STOCK UPDATE for Gray Joy-C at 2020-04-08T12:11:15
 ```
+
+
+
+An example of the console outputs for the easy run script monitoring the shiping availability for Nintendo Switch would be: 
+![SKU example](https://github.com/dareg0/BestBuy-In-Stock-Local-Tracker/blob/master/exampleConsolePrintOut_SWITCH.png)
 
 ### How to find the SKU number?
 ![SKU example](https://github.com/dareg0/BestBuy-In-Stock-Local-Tracker/blob/master/skuScreeshot.png)
