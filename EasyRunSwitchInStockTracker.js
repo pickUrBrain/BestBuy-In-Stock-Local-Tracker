@@ -24,13 +24,14 @@ function Monitor() {
                 if(!LastOnlineAvailable[i]){
                     open(prods[i].addToCartUrl)
                     console.log(name + " becomes available.");
+                    console.log("Paste the link into a browser if needed: " + prods[i].addToCartUrl)
                 }
                 else{
                     console.log(name + " becomes unavailable.")
                 }
                 LastOnlineAvailable[i]=!LastOnlineAvailable[i];
             }
-            
+
         }counter+=1;
         if(counter%50==0){
             for (i = 0; i < 3; i++){
@@ -46,3 +47,6 @@ function Monitor() {
     })
 }
 var monitor = setInterval(Monitor, 2000);
+console.log((new Date).toLocaleDateString() + " " + (new Date).toLocaleTimeString())
+console.log("Start Running")
+console.log("The program is checking with BestBuy API every two seconds. \nA list of products online availability should be printed out around every 100 seconds for your own reference.")
