@@ -1,6 +1,6 @@
 const open = require('open')
 const BestBuyAPI = require('bestbuy')('');
-const SKUs = [6364255, 6364253, 6401728];
+const SKUs = [6364255, 6364253];    //6401728 - Animal Crossing - currently removed 
 const CreateSKUsQuery = (skusArr) => {
     param = sku => `SKU=${sku}`
     skus = skusArr.map(param);
@@ -34,7 +34,7 @@ function Monitor() {
 
         }counter+=1;
         if(counter%50==0){
-            for (i = 0; i < 3; i++){
+            for (i = 0; i < prods.length; i++){
                 var pStr = (new Date).toLocaleTimeString() + " " + prods[i].name.split(' - ')[2].substring(0, 10) + " is ["
                 if(!prods[i].onlineAvailability){
                     pStr+="NOT "}
@@ -49,4 +49,4 @@ function Monitor() {
 var monitor = setInterval(Monitor, 2000);
 console.log((new Date).toLocaleDateString() + " " + (new Date).toLocaleTimeString())
 console.log("Start Running")
-console.log("The program is checking with BestBuy API every two seconds. \nA list of products online availability should be printed out around every 100 seconds for your own reference.")
+console.log("The program is checking with the BestBuy API every two seconds. \nA list of products online availability should be printed out around every 100 seconds for your own reference.")
