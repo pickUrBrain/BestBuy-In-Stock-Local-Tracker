@@ -13,16 +13,15 @@ Currently there are two runnable scripts for use.
 
 ## Getting Started
  1. Sign-up for a developer API Key at https://developer.bestbuy.com/
- 2. Run `npm install bestbuy --save`
- 3. The library requires an API key to be provided before it can be used. You can set that depends on the script you are using:
+ 2. The library requires an API key to be provided before it can be used. You can set that depends on the script you are using:
     * Create a separate file named `apikey.txt` containg the API key.<br>
 
     * Edit the key as a string when invoking the method. The key here only serves as an example.<br>
 ```Javascript
 const BestBuyAPI = require('bestbuy')('ABp3jkZI5KOzCdTDzkofjo19');
 ```
-  4. Run `npm install open` if needed
-  5. Run either command in the Terminal depends on your need:<br>
+  3. Run `npm install open` if needed
+  4. Run either command in the Terminal depends on your need:<br>
   `node EasyRunSwitchInStockTracker.js`<br>
   `node main.js`
 
